@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginScreen: View {
     @State private var username = ""
     @State private var password = ""
-    @State private var wrongPassword = 3
+    @State private var wrongPassword = 0
     @State private var wrongUsername = 0
     @State private var showingLoginScreen = false
     
@@ -28,13 +28,17 @@ struct LoginScreen: View {
                         .foregroundColor(.secondary)
                     VStack {
                         TextField("Username", text: $username)
+                            .padding()
+                            .frame(width: 300, height: 50)
+                            .bordered()
+                            .border(.red, width: CGFloat(wrongUsername))
                         SecureField("Enter your password", text: $password)
+                            .padding()
+                            .frame(width: 300, height: 50)
+                            .bordered()
+                            .border(.red, width: CGFloat(wrongPassword))
                     }
-                    .padding()
-                    .frame(width: 300, height: 50)
-                    .background(Color.black.opacity(0.05))
-                    .cornerRadius(10)
-                    .border(.red, width: CGFloat(wrongUsername))
+                    
                     Spacer()
                     
                 }
