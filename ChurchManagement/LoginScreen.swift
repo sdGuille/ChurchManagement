@@ -37,6 +37,19 @@ struct LoginScreen: View {
                             .frame(width: 300, height: 50)
                             .bordered()
                             .border(.red, width: CGFloat(wrongPassword))
+                        
+                        Button("Login") {
+                            /// Do Something
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: 300, height: 50)
+                        .background(Color.orange.opacity(0.7))
+                        .cornerRadius(10)
+//                        .bordered()
+                        
+                        NavigationLink(destination: Text("You are logged in @\(username)"), isActive: $showingLoginScreen) {
+                            EmptyView()
+                        }
                     }
                     
                     Spacer()
