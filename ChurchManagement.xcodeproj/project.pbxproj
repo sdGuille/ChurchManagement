@@ -42,6 +42,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF4ED9302A81A9D000E679BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB43422A7D9317005958A7 /* Components */,
+				CFD12A702A7C413700275B43 /* HomeView.swift */,
+				CFFB43402A7D8A63005958A7 /* LoginScreen.swift */,
+				CFFB43482A7ED15C005958A7 /* MemberView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CFD12A622A7C413700275B43 = {
 			isa = PBXGroup;
 			children = (
@@ -61,15 +72,12 @@
 		CFD12A6D2A7C413700275B43 /* ChurchManagement */ = {
 			isa = PBXGroup;
 			children = (
-				CFFB43472A7ED137005958A7 /* Member */,
-				CFFB43422A7D9317005958A7 /* Components */,
-				CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */,
-				CFD12A702A7C413700275B43 /* HomeView.swift */,
+				CF4ED9302A81A9D000E679BE /* Views */,
+				CFFB43472A7ED137005958A7 /* App */,
 				CFD12A722A7C413700275B43 /* Assets.xcassets */,
 				CFD12A772A7C413700275B43 /* Persistence.swift */,
 				CFD12A792A7C413700275B43 /* ChurchManagement.xcdatamodeld */,
 				CFD12A742A7C413700275B43 /* Preview Content */,
-				CFFB43402A7D8A63005958A7 /* LoginScreen.swift */,
 			);
 			path = ChurchManagement;
 			sourceTree = "<group>";
@@ -90,12 +98,12 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		CFFB43472A7ED137005958A7 /* Member */ = {
+		CFFB43472A7ED137005958A7 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CFFB43482A7ED15C005958A7 /* MemberView.swift */,
+				CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */,
 			);
-			path = Member;
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

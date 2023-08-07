@@ -9,6 +9,8 @@ import SwiftUI
 import CoreData
 
 struct HomeView: View {
+    private var memberList = ["Guillermo Ruiz", "Edras Perdomo", "Adan Torres"]
+    
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -18,7 +20,11 @@ struct HomeView: View {
 
     var body: some View {
         NavigationStack {
-            Text("Hello World")
+                List(memberList, id: \.self) { member in
+                    Text(member)
+                }
+                .listStyle(.automatic)
+                .navigationTitle("Lista de Miembros")
         }
     }
 }
@@ -30,7 +36,7 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
