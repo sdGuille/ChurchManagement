@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginScreen: View {
+    
     @State private var username = ""
     @State private var password = ""
     @State private var wrongPassword = 0
@@ -44,12 +45,9 @@ struct LoginScreen: View {
                         .foregroundColor(.white)
                         .frame(width: 300, height: 50)
                         .background(Color.orange.opacity(0.7))
-                        .cornerRadius(10)
-//                        .bordered()
+                        .cornerRadius(8)
                         
-                        NavigationLink(destination: Text("You are logged in @\(username)"), isActive: $showingLoginScreen) {
-                            EmptyView()
-                        }
+
                     }
                     
                     Spacer()
