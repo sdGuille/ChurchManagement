@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoginScreen: View {
+struct LoginView: View {
     
     @State private var username = ""
     @State private var password = ""
@@ -33,21 +33,25 @@ struct LoginScreen: View {
                             .frame(width: 300, height: 50)
                             .bordered()
                             .border(.red, width: CGFloat(wrongUsername))
+                        
                         SecureField("Enter your password", text: $password)
                             .padding()
                             .frame(width: 300, height: 50)
                             .bordered()
-                            .border(.red, width: CGFloat(wrongPassword))
                         
-                        Button("Login") {
-                            /// Do Something
+                            .border(.red, width: CGFloat(wrongPassword))
+    
+                        Button(action: { }) {
+                            Text("Get Started")
+                            Image(systemName: "arrow.right.circle")
                         }
                         .foregroundColor(.white)
                         .frame(width: 300, height: 50)
                         .background(Color.orange.opacity(0.7))
                         .cornerRadius(8)
                         
-
+                        
+                        
                     }
                     
                     Spacer()
@@ -61,6 +65,6 @@ struct LoginScreen: View {
 
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LoginScreen()
+        LoginView()
     }
 }
