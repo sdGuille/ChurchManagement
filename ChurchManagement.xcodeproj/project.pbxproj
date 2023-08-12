@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF47B9B02A874C0900D3075F /* MemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47B9AF2A874C0900D3075F /* MemberListView.swift */; };
+		CF47B9B42A8756FE00D3075F /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47B9B32A8756FE00D3075F /* CreateView.swift */; };
+		CF47B9B62A875ECE00D3075F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CF47B9B52A875ECE00D3075F /* .gitignore */; };
 		CFD12A6F2A7C413700275B43 /* ChurchManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */; };
 		CFD12A712A7C413700275B43 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD12A702A7C413700275B43 /* HomeView.swift */; };
 		CFD12A732A7C413700275B43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD12A722A7C413700275B43 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		CF47B9AF2A874C0900D3075F /* MemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListView.swift; sourceTree = "<group>"; };
+		CF47B9B32A8756FE00D3075F /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		CF47B9B52A875ECE00D3075F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CFD12A6B2A7C413700275B43 /* ChurchManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChurchManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchManagementApp.swift; sourceTree = "<group>"; };
 		CFD12A702A7C413700275B43 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF47B9B12A8756CE00D3075F /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				CF47B9B22A8756E000D3075F /* View */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		CF47B9B22A8756E000D3075F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF47B9B32A8756FE00D3075F /* CreateView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CF4ED9302A81A9D000E679BE /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +79,7 @@
 		CFD12A622A7C413700275B43 = {
 			isa = PBXGroup;
 			children = (
+				CF47B9B52A875ECE00D3075F /* .gitignore */,
 				CFD12A6D2A7C413700275B43 /* ChurchManagement */,
 				CFD12A6C2A7C413700275B43 /* Products */,
 			);
@@ -75,10 +96,10 @@
 		CFD12A6D2A7C413700275B43 /* ChurchManagement */ = {
 			isa = PBXGroup;
 			children = (
+				CF47B9B12A8756CE00D3075F /* Create */,
 				CF4ED9302A81A9D000E679BE /* Views */,
 				CFFB43472A7ED137005958A7 /* App */,
 				CFD12A722A7C413700275B43 /* Assets.xcassets */,
-				CFD12A772A7C413700275B43 /* Persistence.swift */,
 				CFD12A792A7C413700275B43 /* ChurchManagement.xcdatamodeld */,
 				CFD12A742A7C413700275B43 /* Preview Content */,
 			);
@@ -96,6 +117,7 @@
 		CFFB43422A7D9317005958A7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CFD12A772A7C413700275B43 /* Persistence.swift */,
 				CFFB43432A7D932F005958A7 /* BorderedViewModifier.swift */,
 			);
 			path = Components;
@@ -168,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFD12A762A7C413700275B43 /* Preview Assets.xcassets in Resources */,
+				CF47B9B62A875ECE00D3075F /* .gitignore in Resources */,
 				CFD12A732A7C413700275B43 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFD12A782A7C413700275B43 /* Persistence.swift in Sources */,
+				CF47B9B42A8756FE00D3075F /* CreateView.swift in Sources */,
 				CFD12A712A7C413700275B43 /* HomeView.swift in Sources */,
 				CFFB43492A7ED15C005958A7 /* MemberView.swift in Sources */,
 				CFFB43442A7D932F005958A7 /* BorderedViewModifier.swift in Sources */,
