@@ -9,35 +9,39 @@ import SwiftUI
 import CoreData
 
 struct HomeView: View {
+    
+    @State var loadingError = false
     private var memberList = ["Guillermo Ruiz", "Edras Perdomo", "Adan Torres"]
     
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    
     var body: some View {
         NavigationStack {
-                List(memberList, id: \.self) { member in
-                    Text(member)
-                }
-                .listStyle(.automatic)
-                .navigationTitle("Lista de Miembros")
+            List(memberList, id: \.self) { member in
+                Text(member)
+            }
+                        Button("Alert") {
+                            loadingError = true
+                        }
+            
+            .navigationTitle("Lista de Miembros")
+            
+            /// This is an example alert, will be modified
+            .alert(isPresented: $loadingError) {
+                Alert(
+                    title: Text("Important message"),
+                    message: Text("""
+                Concatact with the Developer to solve this problem
+                """),
+                    dismissButton: .default(Text("Got it!"))
+                )
+            }
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        HomeView()
     }
 }
