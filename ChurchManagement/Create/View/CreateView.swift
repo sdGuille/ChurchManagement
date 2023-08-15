@@ -18,9 +18,7 @@ struct CreateView: View {
                 job
                 phone
                 birthDate
-                
-                
-                
+
                 Section {
                     submit
                 }
