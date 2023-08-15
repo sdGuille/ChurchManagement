@@ -17,13 +17,9 @@ struct CreateView: View {
                 lastname
                 job
                 phone
+                birthDate
                 
-                Section {
-                    DatePicker("Fecha de Nacimiento", selection: $age, displayedComponents: .date)
-                        .datePickerStyle(.compact)
-                    
-                }
-                .listSectionSeparator(.visible)
+                
                 
                 Section {
                     submit
@@ -56,6 +52,14 @@ private extension CreateView {
     
     var job: some View {
         TextField("Job", text: .constant(""))
+    }
+    
+    var birthDate: some View {
+        Section {
+            DatePicker("Fecha de Nacimiento", selection: $age, displayedComponents: .date)
+                .datePickerStyle(.compact)
+        }
+        .listSectionSeparator(.visible)
     }
     
     var submit: some View {
