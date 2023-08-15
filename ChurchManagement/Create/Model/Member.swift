@@ -9,6 +9,7 @@ import Foundation
 import CoreData
 
 final class Member: NSManagedObject {
+    @NSManaged var bautizadoES: Bool
     @NSManaged var birthdate: Date
     @NSManaged var esBautizado: Bool
     @NSManaged var esCasado: Bool
@@ -25,5 +26,6 @@ final class Member: NSManagedObject {
         setPrimitiveValue(false, forKey: "esBautizado")
         setPrimitiveValue(false, forKey: "esCasado")
         setPrimitiveValue(false, forKey: "isMember")
+        setPrimitiveValue(false, forKey: "bautizadoES")
     }
 }
