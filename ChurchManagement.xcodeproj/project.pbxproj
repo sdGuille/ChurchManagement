@@ -10,6 +10,7 @@
 		CF47B9B02A874C0900D3075F /* MemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47B9AF2A874C0900D3075F /* MemberListView.swift */; };
 		CF47B9B42A8756FE00D3075F /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47B9B32A8756FE00D3075F /* CreateView.swift */; };
 		CF47B9B62A875ECE00D3075F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CF47B9B52A875ECE00D3075F /* .gitignore */; };
+		CF484D472A8BF4D4005CFB9C /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D462A8BF4D4005CFB9C /* Member.swift */; };
 		CFD12A6F2A7C413700275B43 /* ChurchManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */; };
 		CFD12A712A7C413700275B43 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD12A702A7C413700275B43 /* HomeView.swift */; };
 		CFD12A732A7C413700275B43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD12A722A7C413700275B43 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		CF47B9AF2A874C0900D3075F /* MemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListView.swift; sourceTree = "<group>"; };
 		CF47B9B32A8756FE00D3075F /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		CF47B9B52A875ECE00D3075F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CF484D462A8BF4D4005CFB9C /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		CFD12A6B2A7C413700275B43 /* ChurchManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChurchManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchManagementApp.swift; sourceTree = "<group>"; };
 		CFD12A702A7C413700275B43 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		CF47B9B12A8756CE00D3075F /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				CF484D452A8BF4B7005CFB9C /* Model */,
 				CF47B9B22A8756E000D3075F /* View */,
 			);
 			path = Create;
@@ -62,6 +65,14 @@
 				CF47B9B32A8756FE00D3075F /* CreateView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CF484D452A8BF4B7005CFB9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF484D462A8BF4D4005CFB9C /* Member.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CF4ED9302A81A9D000E679BE /* Views */ = {
@@ -211,6 +222,7 @@
 				CFD12A7B2A7C413700275B43 /* ChurchManagement.xcdatamodeld in Sources */,
 				CF47B9B02A874C0900D3075F /* MemberListView.swift in Sources */,
 				CFFB43412A7D8A63005958A7 /* LoginView.swift in Sources */,
+				CF484D472A8BF4D4005CFB9C /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
