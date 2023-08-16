@@ -8,34 +8,28 @@
 import SwiftUI
 
 struct MemberListView: View {
-    @State var loadingError = false
-    private var memberList = ["Guillermo Ruiz", "Edras Perdomo", "Adan Torres"]
+    @State private var search = ""
     
     var body: some View {
         NavigationStack {
-            List(memberList, id: \.self) { member in
-                Text(member)
-            }
-                        Button("Alert") {
-                            loadingError = true
+            List {
+                ForEach((0...10), id: \.self) { item in
+                    ZStack(alignment: .leading) {
+                        NavigationLink(destination: MemberDetailView()) {
+                            EmptyView()
                         }
-            
-            .navigationTitle("Lista de Miembros")
-            
-            /// This is an example alert, will be modified
-            .alert(isPresented: $loadingError) {
-                Alert(
-                    title: Text("Important message"),
-                    message: Text("""
-                Concatact with the Developer to solve this problem
-                """),
-                    dismissButton: .default(Text("Got it!"))
-                )
+                        .opacity(0)
+                        MemberRowView()
+                    }
+                }
             }
+            .navigationTitle("Lista de Miembros")
+            .searchable(text: $search, prompt: "Buscar miembros")
         }
-        
     }
+    
 }
+
 
 struct MemberListView_Previews: PreviewProvider {
     static var previews: some View {
