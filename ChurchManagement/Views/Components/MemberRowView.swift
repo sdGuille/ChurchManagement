@@ -12,9 +12,8 @@ struct MemberRowView: View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Nombre")
                 .font(.system(size: 26, design: .rounded).bold())
-            Text("Number de telefono")
+            Text("Numero de telefono")
                 .font(.callout.bold())
-            Text("")
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .overlay(alignment: .topTrailing) {
