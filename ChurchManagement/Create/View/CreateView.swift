@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CreateView: View {
-    @State private var age = Date(timeIntervalSince1970: 0)
     
     var body: some View {
         NavigationStack {
@@ -17,8 +16,14 @@ struct CreateView: View {
                 lastname
                 job
                 phone
+                esBautizado
+                bautizadoES
+                ministerio
+                isMember
                 birthDate
-
+                
+                
+                
                 Section {
                     submit
                 }
@@ -37,27 +42,43 @@ struct CreateView_Previews: PreviewProvider {
 private extension CreateView {
     
     var firstname: some View {
-        TextField("First name", text: .constant(""))
+        TextField("Nombre", text: .constant(""))
     }
     
     var lastname: some View {
-        TextField("Last name", text: .constant(""))
+        TextField("Apellido", text: .constant(""))
     }
     
     var phone: some View {
-        TextField("Phone number", text: .constant(""))
+        TextField("Numero de telefono", text: .constant(""))
+            .keyboardType(.phonePad)
     }
     
     var job: some View {
-        TextField("Job", text: .constant(""))
+        TextField("Ocupacion", text: .constant(""))
+    }
+    
+    var isMember: some View {
+        Toggle("Es Miembro", isOn: .constant(true))
+    }
+    
+    var esBautizado: some View {
+        TextField("Es bautizado", text: .constant(""))
+    }
+    
+    var bautizadoES: some View {
+        TextField("Bautizado en El Espiritu Santo", text: .constant(""))
+    }
+    
+    var ministerio: some View {
+        TextField("Ministerio", text: .constant(""))
     }
     
     var birthDate: some View {
         Section {
-            DatePicker("Fecha de Nacimiento", selection: $age, displayedComponents: .date)
+            DatePicker("Fecha de Nacimiento", selection: .constant(.now), displayedComponents: [.date])
                 .datePickerStyle(.compact)
         }
-        .listSectionSeparator(.visible)
     }
     
     var submit: some View {
