@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MemberListView: View {
     @State private var search = ""
+    @State private var isShowingNewMember = false
     
     var body: some View {
         NavigationStack {
@@ -21,6 +22,21 @@ struct MemberListView: View {
                         .opacity(0)
                         MemberRowView()
                     }
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        isShowingNewMember.toggle()
+                    } label: {
+                        Image(systemName: "person.fill.badge.plus")
+                            .font(.title2)
+                    }
+                }
+            }
+            .sheet(isPresented: $isShowingNewMember) {
+                NavigationStack {
+                    CreateView()
                 }
             }
             .navigationTitle("Lista de Miembros")

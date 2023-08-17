@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CreateView: View {
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         NavigationStack {
@@ -32,13 +33,13 @@ struct CreateView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") {
-                        submit
+                        dismiss()
                     }
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") {
-                        // TODO: Do something here
+                        dismiss()
                     }
                 }
             }
