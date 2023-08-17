@@ -29,6 +29,19 @@ struct CreateView: View {
                 }
             }
             .navigationTitle("Crear")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        submit
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") {
+                        // TODO: Do something here
+                    }
+                }
+            }
         }
     }
 }
@@ -83,7 +96,7 @@ private extension CreateView {
     
     var submit: some View {
         Button("Submit") {
-            // TODO: Handle action
+            // TODO: Do something here
         }
     }
 }
