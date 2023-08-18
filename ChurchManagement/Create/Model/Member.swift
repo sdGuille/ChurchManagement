@@ -30,3 +30,18 @@ final class Member: NSManagedObject {
         setPrimitiveValue(false, forKey: "bautizadoES")
     }
 }
+
+extension Member {
+    
+    private static var memberFetchRequest: NSFetchRequest<Member> {
+        NSFetchRequest(entityName: "Member")
+    }
+    
+    static func all() -> NSFetchRequest<Member> {
+        let request: NSFetchRequest<Member> = memberFetchRequest
+        request.sortDescriptors = [
+            NSSortDescriptor(keyPath: \Member.name, ascending: true)
+        ]
+        return request
+    }
+}
