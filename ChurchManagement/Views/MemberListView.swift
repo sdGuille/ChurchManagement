@@ -10,11 +10,13 @@ import SwiftUI
 struct MemberListView: View {
     @State private var search = ""
     @State private var isShowingNewMember = false
+    @FetchRequest(fetchRequest: Member.all()) private var members
+    var provider = MembersProvider.shared
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach((0...10), id: \.self) { item in
+                ForEach(members) { member in
                     ZStack(alignment: .leading) {
                         NavigationLink(destination: MemberDetailView()) {
                             EmptyView()
@@ -36,7 +38,7 @@ struct MemberListView: View {
             }
             .sheet(isPresented: $isShowingNewMember) {
                 NavigationStack {
-                    CreateView()
+                    CreateView(vm: .init(provider: provider))
                 }
             }
             .navigationTitle("Lista de Miembros")

@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct MemberRowView: View {
+    let member: Member
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Nombre")
+            Text("\(member.isBirthDate ? "🎂" : "")\(member.name)")
                 .font(.system(size: 26, design: .rounded).bold())
-            Text("Numero de telefono")
+            Text(member.phoneNumber)
                 .font(.callout.bold())
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -29,8 +31,8 @@ struct MemberRowView: View {
     }
 }
 
-struct MemberRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        MemberRowView()
-    }
-}
+//struct MemberRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MemberRowView()
+//    }
+//}
