@@ -14,6 +14,7 @@
 		CF484D4A2A8C1506005CFB9C /* MembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D492A8C1506005CFB9C /* MembersProvider.swift */; };
 		CF484D4C2A8C39A7005CFB9C /* MemberRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D4B2A8C39A7005CFB9C /* MemberRowView.swift */; };
 		CF484D4E2A8C3EE1005CFB9C /* MemberDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D4D2A8C3EE1005CFB9C /* MemberDetailView.swift */; };
+		CF484D502A8E9DC5005CFB9C /* EditMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D4F2A8E9DC5005CFB9C /* EditMemberViewModel.swift */; };
 		CFD12A6F2A7C413700275B43 /* ChurchManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */; };
 		CFD12A712A7C413700275B43 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD12A702A7C413700275B43 /* HomeView.swift */; };
 		CFD12A732A7C413700275B43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD12A722A7C413700275B43 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		CF484D492A8C1506005CFB9C /* MembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersProvider.swift; sourceTree = "<group>"; };
 		CF484D4B2A8C39A7005CFB9C /* MemberRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRowView.swift; sourceTree = "<group>"; };
 		CF484D4D2A8C3EE1005CFB9C /* MemberDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailView.swift; sourceTree = "<group>"; };
+		CF484D4F2A8E9DC5005CFB9C /* EditMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMemberViewModel.swift; sourceTree = "<group>"; };
 		CFD12A6B2A7C413700275B43 /* ChurchManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChurchManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchManagementApp.swift; sourceTree = "<group>"; };
 		CFD12A702A7C413700275B43 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				CF484D452A8BF4B7005CFB9C /* Model */,
 				CF47B9B22A8756E000D3075F /* View */,
+				CF484D4F2A8E9DC5005CFB9C /* EditMemberViewModel.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				CFFB43442A7D932F005958A7 /* BorderedViewModifier.swift in Sources */,
 				CFD12A6F2A7C413700275B43 /* ChurchManagementApp.swift in Sources */,
 				CFD12A7B2A7C413700275B43 /* ChurchManagement.xcdatamodeld in Sources */,
+				CF484D502A8E9DC5005CFB9C /* EditMemberViewModel.swift in Sources */,
 				CF484D4A2A8C1506005CFB9C /* MembersProvider.swift in Sources */,
 				CF47B9B02A874C0900D3075F /* MemberListView.swift in Sources */,
 				CF484D4C2A8C39A7005CFB9C /* MemberRowView.swift in Sources */,
