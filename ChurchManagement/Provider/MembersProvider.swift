@@ -17,6 +17,10 @@ final class MembersProvider {
         persistentContainer.viewContext
     }
     
+    var newContext: NSManagedObjectContext {
+        persistentContainer.newBackgroundContext()
+    }
+    
     private init() {
         persistentContainer = NSPersistentContainer(name: "ChurchManagement")
         persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
