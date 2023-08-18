@@ -9,22 +9,20 @@ import SwiftUI
 
 struct CreateView: View {
     @Environment(\.dismiss) private var dismiss
+    @ObservedObject var vm: EditMemberViewModel
     
     var body: some View {
         NavigationStack {
             Form {
                 firstname
                 lastname
-                job
                 phone
-                esBautizado
-                bautizadoES
+                job
                 ministerio
+                bautizadoES
                 isMember
                 birthDate
-                
-                
-                
+
                 Section {
                     submit
                 }
@@ -39,7 +37,12 @@ struct CreateView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") {
-                        dismiss()
+                        do {
+                            try vm.save()
+                            dismiss()
+                        } catch {
+                            print(error)
+                        }
                     }
                 }
             }
@@ -49,43 +52,39 @@ struct CreateView: View {
 
 struct CreateView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateView()
+        CreateView(vm: .init(provider: .shared))
     }
 }
 
 private extension CreateView {
     
     var firstname: some View {
-        TextField("Nombre", text: .constant(""))
+        TextField("Nombre", text: $vm.member.name)
     }
     
     var lastname: some View {
-        TextField("Apellido", text: .constant(""))
+        TextField("Apellido", text: $vm.member.lastname)
     }
     
     var phone: some View {
-        TextField("Numero de telefono", text: .constant(""))
+        TextField("Numero de telefono", text: $vm.member.phoneNumber)
             .keyboardType(.phonePad)
     }
     
     var job: some View {
-        TextField("Ocupacion", text: .constant(""))
+        TextField("Ocupacion", text: $vm.member.job)
     }
     
     var isMember: some View {
-        Toggle("Es Miembro", isOn: .constant(true))
-    }
-    
-    var esBautizado: some View {
-        TextField("Es bautizado", text: .constant(""))
+        Toggle("Es Miembro", isOn: $vm.member.isMember)
     }
     
     var bautizadoES: some View {
-        TextField("Bautizado en El Espiritu Santo", text: .constant(""))
+        Toggle("Bautizado en El Espiritu Santo", isOn: $vm.member.bautizadoES)
     }
     
     var ministerio: some View {
-        TextField("Ministerio", text: .constant(""))
+        TextField("Ministerio", text: $vm.member.ministerio)
     }
     
     var birthDate: some View {
