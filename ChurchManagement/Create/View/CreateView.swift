@@ -89,7 +89,7 @@ private extension CreateView {
     
     var birthDate: some View {
         Section {
-            DatePicker("Fecha de Nacimiento", selection: .constant(.now), displayedComponents: [.date])
+            DatePicker("Fecha de Nacimiento", selection: $vm.member.birthdate, displayedComponents: [.date])
                 .datePickerStyle(.compact)
         }
     }

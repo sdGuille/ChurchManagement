@@ -18,11 +18,11 @@ struct MemberListView: View {
             List {
                 ForEach(members) { member in
                     ZStack(alignment: .leading) {
-                        NavigationLink(destination: MemberDetailView()) {
+                        NavigationLink(destination: MemberDetailView(member: member)) {
                             EmptyView()
                         }
                         .opacity(0)
-                        MemberRowView()
+                        MemberRowView(member: member)
                     }
                 }
             }

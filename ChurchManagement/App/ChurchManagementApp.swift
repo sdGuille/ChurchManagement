@@ -12,7 +12,7 @@ struct ChurchManagementApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            MemberListView()
                 .environment(\.managedObjectContext, MembersProvider.shared.viewContext)
         }
     }

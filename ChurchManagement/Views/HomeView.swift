@@ -10,7 +10,7 @@ import CoreData
 
 struct HomeView: View {
     var body: some View {
-        LoginView()
+        MemberListView()
     }
 }
 
