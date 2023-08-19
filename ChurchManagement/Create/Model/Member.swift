@@ -25,6 +25,17 @@ final class Member: NSManagedObject, Identifiable {
         Calendar.current.isDateInToday(birthdate)
     }
     
+    var formatedName: String {
+        return "\(isBirthDate ? "🎂" : "")\(name)"
+    }
+    
+    var iniciales: String {
+        guard let firstNameCharacter = name.first else { return "N"}
+        guard let lastNameCharacter = lastname.first else { return "L"}
+        
+        return "\(firstNameCharacter)\(lastNameCharacter)"
+    }
+    
     override func awakeFromInsert() {
         super.awakeFromInsert()
         
