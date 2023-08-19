@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct MemberRowView: View {
-    let member: Member
+    
+    /// Modifier Object Context
+    @Environment(\.managedObjectContext) private  var moc
+    @ObservedObject var member: Member
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("\(member.isBirthDate ? "🎂" : "")\(member.name)")
+            Text(member.formatedName )
                 .font(.system(size: 26, design: .rounded).bold())
             Text(member.phoneNumber)
                 .font(.callout.bold())
@@ -20,13 +23,27 @@ struct MemberRowView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .overlay(alignment: .topTrailing) {
             Button {
-                // TODO: Handle Memebership
+                toggleIsMember()
             } label: {
                 Image(systemName: "star")
                     .font(.title3)
                     .symbolVariant(.fill)
-                    .foregroundColor(.gray.opacity(0.3))
+                    .foregroundColor(member.isMember ? .yellow : .gray.opacity(0.3))
             }
+        }
+    }
+}
+
+private extension MemberRowView {
+    
+    func toggleIsMember() {
+        member.isMember.toggle()
+        do {
+            if moc.hasChanges {
+                try moc.save()
+            }
+        } catch {
+            print(error)
         }
     }
 }
