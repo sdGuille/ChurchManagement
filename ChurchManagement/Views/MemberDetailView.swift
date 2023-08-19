@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct MemberDetailView: View {
+    let member: Member
+    
     var body: some View {
         List {
             Section {
                 HStack {
-                    Text("GR")
+                    Text(member.iniciales)
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
@@ -21,12 +23,12 @@ struct MemberDetailView: View {
                         .clipShape(Circle())
                     
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Name here")
+                        Text(member.name)
                             .font(.subheadline)
                             .fontWeight(.semibold)
                             .padding(.top, 4)
                         
-                        Text("Role")
+                        Text(member.lastname)
                             .font(.footnote)
                             .tint(.gray)
                     }
@@ -41,7 +43,6 @@ struct MemberDetailView: View {
             }
             
             Section("Informacion Ministerial") {
-                esBautizado
                 bautizadoES
                 ministerio
             }
@@ -49,17 +50,17 @@ struct MemberDetailView: View {
     }
 }
 
-struct MemberDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        MemberDetailView()
-    }
-}
+//struct MemberDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MemberDetailView()
+//    }
+//}
 
 extension MemberDetailView {
     
     var job: some View {
         LabeledContent {
-            Text("Ingrese su ocupación")
+            Text(member.job)
         } label: {
             Text("Ocupación")
         }
@@ -67,7 +68,7 @@ extension MemberDetailView {
     
     var phone: some View {
         LabeledContent {
-            Text("Ingrese number de telefono")
+            Text(member.phoneNumber)
         } label: {
             Text("Telefono")
         }
@@ -75,7 +76,7 @@ extension MemberDetailView {
     
     var birthdate: some View {
         LabeledContent {
-            Text("Enero 1, 2000")
+            Text(member.birthdate, style: .date)
         } label: {
             Text("Cumpleaños")
         }
@@ -83,23 +84,15 @@ extension MemberDetailView {
     
     var esCasado: some View {
         LabeledContent {
-            Text("Si/no")
+            Text("\(member.esCasado ? "Si" : "No")")
         } label: {
             Text("Estado Civil")
         }
     }
     
-    var esBautizado: some View {
-        LabeledContent {
-            Text("Si/no")
-        } label: {
-            Text("Es Bautizado")
-        }
-    }
-    
     var bautizadoES: some View {
         LabeledContent {
-            Text("Si/No")
+            Text("\(member.bautizadoES ? "Si" : "No")")
         } label: {
             Text("Bautizado en el Espiritu Santo")
         }
@@ -107,7 +100,7 @@ extension MemberDetailView {
     
     var ministerio: some View {
         LabeledContent {
-            Text("Servidores")
+            Text(member.ministerio)
         } label: {
             Text("Ministerio")
         }
