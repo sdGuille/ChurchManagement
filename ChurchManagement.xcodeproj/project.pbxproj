@@ -97,10 +97,17 @@
 				CFD12A702A7C413700275B43 /* HomeView.swift */,
 				CFFB43402A7D8A63005958A7 /* LoginView.swift */,
 				CF47B9AF2A874C0900D3075F /* MemberListView.swift */,
-				CF7BA2372A91BE1000612924 /* ExampleTest.swift */,
 				CF484D4D2A8C3EE1005CFB9C /* MemberDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CF7BA2392A91BEED00612924 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				CF7BA2372A91BE1000612924 /* ExampleTest.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		CFD12A622A7C413700275B43 = {
@@ -123,6 +130,7 @@
 		CFD12A6D2A7C413700275B43 /* ChurchManagement */ = {
 			isa = PBXGroup;
 			children = (
+				CF7BA2392A91BEED00612924 /* Test */,
 				CF484D482A8C14E9005CFB9C /* Provider */,
 				CF47B9B12A8756CE00D3075F /* Create */,
 				CF4ED9302A81A9D000E679BE /* Views */,
