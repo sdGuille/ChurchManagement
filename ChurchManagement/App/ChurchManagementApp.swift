@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct ChurchManagementApp: App {
+    let persistentContainer = MembersProvider.shared.persistentContainer
 
     var body: some Scene {
         WindowGroup {
             MemberListView()
-                .environment(\.managedObjectContext, MembersProvider.shared.viewContext)
+                .environment(\.managedObjectContext, persistentContainer.viewContext)
         }
     }
 }

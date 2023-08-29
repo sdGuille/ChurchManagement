@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CreateView: View {
+    
+
     @Environment(\.dismiss) private var dismiss
     @ObservedObject var vm: EditMemberViewModel
+    @Environment(\.managedObjectContext) private var viewContext
     
     var body: some View {
         NavigationStack {
@@ -36,10 +39,11 @@ struct CreateView: View {
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Done") {
+                    Button("Guardar") {
                         do {
-                            try vm.save()
+                            try viewContext.save()
                             dismiss()
+                            
                         } catch {
                             print(error)
                         }

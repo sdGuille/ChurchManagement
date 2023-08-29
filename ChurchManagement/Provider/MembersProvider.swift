@@ -11,7 +11,7 @@ import CoreData
 final class MembersProvider {
     static let shared = MembersProvider()
     
-    private let persistentContainer: NSPersistentContainer
+    let persistentContainer: NSPersistentContainer
     
     var viewContext: NSManagedObjectContext {
         persistentContainer.viewContext

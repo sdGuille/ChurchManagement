@@ -29,12 +29,12 @@ final class Member: NSManagedObject, Identifiable {
         return "\(isBirthDate ? "🎂" : "")\(name)"
     }
     
-    var iniciales: String {
-        guard let firstNameCharacter = name.first else { return "N"}
-        guard let lastNameCharacter = lastname.first else { return "L"}
-        
-        return "\(firstNameCharacter)\(lastNameCharacter)"
-    }
+//    var iniciales: String {
+//        guard let firstNameCharacter = name.first else { return "N"}
+//        guard let lastNameCharacter = lastname.first else { return "L"}
+//        
+//        return "\(firstNameCharacter)\(lastNameCharacter)"
+//    }
     
     override func awakeFromInsert() {
         super.awakeFromInsert()

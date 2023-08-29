@@ -14,7 +14,7 @@ struct MemberDetailView: View {
         List {
             Section {
                 HStack {
-                    Text(member.iniciales)
+                    Text("DJ")
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
