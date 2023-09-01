@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22G74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Member" representedClassName=".Member" syncable="YES">
+    <entity name="Member" representedClassName=".Member" syncable="YES" codeGenerationType="class">
+        <attribute name="apellido" optional="YES" attributeType="String"/>
         <attribute name="bautizadoES" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="birthdate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="esCasado" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="esMiembro" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="isMember" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="job" optional="YES" attributeType="String"/>
-        <attribute name="lastname" optional="YES" attributeType="String"/>
         <attribute name="ministerio" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <attribute name="nombre" optional="YES" attributeType="String"/>
+        <attribute name="ocupacion" optional="YES" attributeType="String"/>
+        <attribute name="telefono" optional="YES" attributeType="String"/>
     </entity>
 </model>
