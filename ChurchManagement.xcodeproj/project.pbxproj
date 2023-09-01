@@ -7,38 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF47B9B02A874C0900D3075F /* MemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47B9AF2A874C0900D3075F /* MemberListView.swift */; };
-		CF47B9B42A8756FE00D3075F /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47B9B32A8756FE00D3075F /* CreateView.swift */; };
+		CF47B9B02A874C0900D3075F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47B9AF2A874C0900D3075F /* MainView.swift */; };
 		CF47B9B62A875ECE00D3075F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CF47B9B52A875ECE00D3075F /* .gitignore */; };
-		CF484D472A8BF4D4005CFB9C /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D462A8BF4D4005CFB9C /* Member.swift */; };
-		CF484D4A2A8C1506005CFB9C /* MembersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D492A8C1506005CFB9C /* MembersProvider.swift */; };
-		CF484D4C2A8C39A7005CFB9C /* MemberRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D4B2A8C39A7005CFB9C /* MemberRowView.swift */; };
+		CF484D4A2A8C1506005CFB9C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D492A8C1506005CFB9C /* DataController.swift */; };
 		CF484D4E2A8C3EE1005CFB9C /* MemberDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D4D2A8C3EE1005CFB9C /* MemberDetailView.swift */; };
-		CF484D502A8E9DC5005CFB9C /* EditMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D4F2A8E9DC5005CFB9C /* EditMemberViewModel.swift */; };
+		CF5677A92A9E94C3005CEF6D /* EmojiStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5677A82A9E94C3005CEF6D /* EmojiStateView.swift */; };
+		CF5677AF2A9FD49D005CEF6D /* AddMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5677AE2A9FD49D005CEF6D /* AddMemberView.swift */; };
+		CF5677B32A9FD878005CEF6D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5677B22A9FD878005CEF6D /* DetailView.swift */; };
 		CFD12A6F2A7C413700275B43 /* ChurchManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */; };
-		CFD12A712A7C413700275B43 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD12A702A7C413700275B43 /* HomeView.swift */; };
 		CFD12A732A7C413700275B43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD12A722A7C413700275B43 /* Assets.xcassets */; };
 		CFD12A762A7C413700275B43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD12A752A7C413700275B43 /* Preview Assets.xcassets */; };
 		CFD12A7B2A7C413700275B43 /* ChurchManagement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFD12A792A7C413700275B43 /* ChurchManagement.xcdatamodeld */; };
-		CFFB43442A7D932F005958A7 /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB43432A7D932F005958A7 /* BorderedViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CF47B9AF2A874C0900D3075F /* MemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListView.swift; sourceTree = "<group>"; };
-		CF47B9B32A8756FE00D3075F /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		CF47B9AF2A874C0900D3075F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CF47B9B52A875ECE00D3075F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		CF484D462A8BF4D4005CFB9C /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		CF484D492A8C1506005CFB9C /* MembersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersProvider.swift; sourceTree = "<group>"; };
-		CF484D4B2A8C39A7005CFB9C /* MemberRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRowView.swift; sourceTree = "<group>"; };
+		CF484D492A8C1506005CFB9C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		CF484D4D2A8C3EE1005CFB9C /* MemberDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailView.swift; sourceTree = "<group>"; };
-		CF484D4F2A8E9DC5005CFB9C /* EditMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMemberViewModel.swift; sourceTree = "<group>"; };
+		CF5677A82A9E94C3005CEF6D /* EmojiStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiStateView.swift; sourceTree = "<group>"; };
+		CF5677AE2A9FD49D005CEF6D /* AddMemberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemberView.swift; sourceTree = "<group>"; };
+		CF5677B22A9FD878005CEF6D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		CFD12A6B2A7C413700275B43 /* ChurchManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChurchManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchManagementApp.swift; sourceTree = "<group>"; };
-		CFD12A702A7C413700275B43 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CFD12A722A7C413700275B43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFD12A752A7C413700275B43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CFD12A7A2A7C413700275B43 /* ChurchManagement.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChurchManagement.xcdatamodel; sourceTree = "<group>"; };
-		CFFB43432A7D932F005958A7 /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,49 +46,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CF47B9B12A8756CE00D3075F /* Create */ = {
-			isa = PBXGroup;
-			children = (
-				CF484D452A8BF4B7005CFB9C /* Model */,
-				CF47B9B22A8756E000D3075F /* View */,
-				CF484D4F2A8E9DC5005CFB9C /* EditMemberViewModel.swift */,
-			);
-			path = Create;
-			sourceTree = "<group>";
-		};
-		CF47B9B22A8756E000D3075F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CF47B9B32A8756FE00D3075F /* CreateView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CF484D452A8BF4B7005CFB9C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CF484D462A8BF4D4005CFB9C /* Member.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		CF484D482A8C14E9005CFB9C /* Provider */ = {
 			isa = PBXGroup;
 			children = (
-				CF484D492A8C1506005CFB9C /* MembersProvider.swift */,
+				CF484D492A8C1506005CFB9C /* DataController.swift */,
 			);
 			path = Provider;
-			sourceTree = "<group>";
-		};
-		CF4ED9302A81A9D000E679BE /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB43422A7D9317005958A7 /* Components */,
-				CFD12A702A7C413700275B43 /* HomeView.swift */,
-				CF47B9AF2A874C0900D3075F /* MemberListView.swift */,
-				CF484D4D2A8C3EE1005CFB9C /* MemberDetailView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		CFD12A622A7C413700275B43 = {
@@ -117,10 +74,13 @@
 		CFD12A6D2A7C413700275B43 /* ChurchManagement */ = {
 			isa = PBXGroup;
 			children = (
+				CF5677B22A9FD878005CEF6D /* DetailView.swift */,
+				CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */,
+				CF5677A82A9E94C3005CEF6D /* EmojiStateView.swift */,
+				CF484D4D2A8C3EE1005CFB9C /* MemberDetailView.swift */,
+				CF47B9AF2A874C0900D3075F /* MainView.swift */,
+				CF5677AE2A9FD49D005CEF6D /* AddMemberView.swift */,
 				CF484D482A8C14E9005CFB9C /* Provider */,
-				CF47B9B12A8756CE00D3075F /* Create */,
-				CF4ED9302A81A9D000E679BE /* Views */,
-				CFFB43472A7ED137005958A7 /* App */,
 				CFD12A722A7C413700275B43 /* Assets.xcassets */,
 				CFD12A792A7C413700275B43 /* ChurchManagement.xcdatamodeld */,
 				CFD12A742A7C413700275B43 /* Preview Content */,
@@ -134,23 +94,6 @@
 				CFD12A752A7C413700275B43 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		CFFB43422A7D9317005958A7 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB43432A7D932F005958A7 /* BorderedViewModifier.swift */,
-				CF484D4B2A8C39A7005CFB9C /* MemberRowView.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		CFFB43472A7ED137005958A7 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */,
-			);
-			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,17 +167,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF47B9B42A8756FE00D3075F /* CreateView.swift in Sources */,
-				CFD12A712A7C413700275B43 /* HomeView.swift in Sources */,
 				CF484D4E2A8C3EE1005CFB9C /* MemberDetailView.swift in Sources */,
-				CFFB43442A7D932F005958A7 /* BorderedViewModifier.swift in Sources */,
+				CF5677B32A9FD878005CEF6D /* DetailView.swift in Sources */,
+				CF5677AF2A9FD49D005CEF6D /* AddMemberView.swift in Sources */,
 				CFD12A6F2A7C413700275B43 /* ChurchManagementApp.swift in Sources */,
 				CFD12A7B2A7C413700275B43 /* ChurchManagement.xcdatamodeld in Sources */,
-				CF484D502A8E9DC5005CFB9C /* EditMemberViewModel.swift in Sources */,
-				CF484D4A2A8C1506005CFB9C /* MembersProvider.swift in Sources */,
-				CF47B9B02A874C0900D3075F /* MemberListView.swift in Sources */,
-				CF484D4C2A8C39A7005CFB9C /* MemberRowView.swift in Sources */,
-				CF484D472A8BF4D4005CFB9C /* Member.swift in Sources */,
+				CF484D4A2A8C1506005CFB9C /* DataController.swift in Sources */,
+				CF47B9B02A874C0900D3075F /* MainView.swift in Sources */,
+				CF5677A92A9E94C3005CEF6D /* EmojiStateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
