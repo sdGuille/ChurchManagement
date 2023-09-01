@@ -8,39 +8,58 @@
 import SwiftUI
 
 struct MemberDetailView: View {
+    let member: Member
+    var customName: String {
+        let name = "\(member.nombre?.first ?? "U")"
+        let lastname = "\(member.apellido?.first ?? "N")"
+        return "\(name)\(lastname)"
+    }
+    
     var body: some View {
-        List {
-            Section {
+        VStack {
+            Form {
                 HStack {
-                    Text("DJ")
+                    Text(customName)
                         .font(.title)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
+                        .fontWeight(.bold)
                         .frame(width: 72, height: 72)
                         .background(Color(.systemGray3))
                         .clipShape(Circle())
                     
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("nombre")
+                        Text(member.nombre ?? "")
                             .font(.subheadline)
                             .fontWeight(.semibold)
                             .padding(.top, 4)
                         
-                        Text("Lastname")
+                        Text(member.apellido ?? "")
                             .font(.footnote)
                             .tint(.gray)
                     }
+                    
                 }
+                
+                Section("Inofrmacion General") {
+                    Text(member.telefono ?? "Unknown")
+                    Text(member.esCasado ? "Casado/a" : "Soltero/a")
+                    Text(member.birthdate ?? Date(), style: .date)
+                    Text(member.ocupacion ?? "Oficios domesticos")
+                }
+                .font(.footnote)
+                .fontWeight(.semibold)
+                
+                Section("Informacion Ministerial") {
+                    Text(member.esMiembro ? "Miembro en propiedad" : "Miembro Principiante")
+                    Text(member.bautizadoES ? "Bautizado en el Espiritu Santo" : "")
+                    Text(member.ministerio ?? "")
+                }
+                .font(.footnote)
+                .fontWeight(.semibold)
             }
         }
     }
 }
 
-struct MemberDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        MemberDetailView()
-    }
-}
 
 //import SwiftUI
 //
