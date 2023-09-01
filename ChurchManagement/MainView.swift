@@ -21,7 +21,7 @@ struct MainView: View {
             List {
                 ForEach(members, id: \.self) { member in
                     NavigationLink {
-                        DetailView(member: member)
+                        MemberDetailView(member: member)
                     } label: {
                         HStack {
                             VStack {
@@ -35,6 +35,7 @@ struct MainView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteMembers)
             }
             .navigationTitle("Miembros")
             .toolbar {
@@ -46,13 +47,26 @@ struct MainView: View {
                             .font(.title2)
                     }
                 }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
             }
+            
             .sheet(isPresented: $showingAddScreen) {
                 AddMemberView()
             }
         }
     }
     
+    func deleteMembers(at offsets: IndexSet) {
+        for offset in offsets {
+            let member = members[offset]
+            
+            moc.delete(member)
+        }
+        try? moc.save()
+    }
 }
 
 
