@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct MemberDetailView: View {
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.dismiss) var dismiss
+    @State private var showDeleteAlert = false
+    
     let member: Member
     var customName: String {
         let name = "\(member.nombre?.first ?? "U")"
@@ -56,7 +60,28 @@ struct MemberDetailView: View {
                 .font(.footnote)
                 .fontWeight(.semibold)
             }
+            .alert("Eliminar miembro?", isPresented: $showDeleteAlert) {
+                Button("Eliminar", role: .destructive, action: deleteMember)
+                Button("Cancelar", role: .cancel) {}
+            } message: {
+                Text("Esta seguro?")
+            }
+            
+            .toolbar {
+                Button {
+                    showDeleteAlert = true
+                } label: {
+                    Label("Eliminar miembro", systemImage: "trash")
+                }
+            }
         }
+    }
+    
+    func deleteMember() {
+        moc.delete(member)
+        
+//        try? moc.save()
+        dismiss()
     }
 }
 
