@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1DE7532AABB0690002AD35 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1DE7522AABB0690002AD35 /* SignInView.swift */; };
+		CF1DE7562AABB3E10002AD35 /* ShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1DE7552AABB3E10002AD35 /* ShadowExtension.swift */; };
+		CF1DE7582AABB8510002AD35 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1DE7572AABB8510002AD35 /* ColorExtension.swift */; };
+		CF1DE75A2AABBB4C0002AD35 /* NeuButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1DE7592AABBB4C0002AD35 /* NeuButtonStyle.swift */; };
+		CF3D10932AB374A80061C951 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3D10922AB374A80061C951 /* SignInViewModel.swift */; };
 		CF47B9B02A874C0900D3075F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47B9AF2A874C0900D3075F /* MainView.swift */; };
 		CF47B9B62A875ECE00D3075F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CF47B9B52A875ECE00D3075F /* .gitignore */; };
 		CF484D4A2A8C1506005CFB9C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF484D492A8C1506005CFB9C /* DataController.swift */; };
@@ -21,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF1DE7522AABB0690002AD35 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		CF1DE7552AABB3E10002AD35 /* ShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowExtension.swift; sourceTree = "<group>"; };
+		CF1DE7572AABB8510002AD35 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		CF1DE7592AABBB4C0002AD35 /* NeuButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuButtonStyle.swift; sourceTree = "<group>"; };
+		CF3D10922AB374A80061C951 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		CF47B9AF2A874C0900D3075F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CF47B9B52A875ECE00D3075F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CF484D492A8C1506005CFB9C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -46,6 +56,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1DE7542AABB3BD0002AD35 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CF1DE7552AABB3E10002AD35 /* ShadowExtension.swift */,
+				CF1DE7572AABB8510002AD35 /* ColorExtension.swift */,
+				CF1DE7592AABBB4C0002AD35 /* NeuButtonStyle.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		CF484D482A8C14E9005CFB9C /* Provider */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +94,7 @@
 		CFD12A6D2A7C413700275B43 /* ChurchManagement */ = {
 			isa = PBXGroup;
 			children = (
+				CF1DE7542AABB3BD0002AD35 /* Components */,
 				CF5677B22A9FD878005CEF6D /* DetailView.swift */,
 				CFD12A6E2A7C413700275B43 /* ChurchManagementApp.swift */,
 				CF5677A82A9E94C3005CEF6D /* EmojiStateView.swift */,
@@ -84,6 +105,8 @@
 				CFD12A722A7C413700275B43 /* Assets.xcassets */,
 				CFD12A792A7C413700275B43 /* ChurchManagement.xcdatamodeld */,
 				CFD12A742A7C413700275B43 /* Preview Content */,
+				CF1DE7522AABB0690002AD35 /* SignInView.swift */,
+				CF3D10922AB374A80061C951 /* SignInViewModel.swift */,
 			);
 			path = ChurchManagement;
 			sourceTree = "<group>";
@@ -171,10 +194,15 @@
 				CF5677B32A9FD878005CEF6D /* DetailView.swift in Sources */,
 				CF5677AF2A9FD49D005CEF6D /* AddMemberView.swift in Sources */,
 				CFD12A6F2A7C413700275B43 /* ChurchManagementApp.swift in Sources */,
+				CF3D10932AB374A80061C951 /* SignInViewModel.swift in Sources */,
 				CFD12A7B2A7C413700275B43 /* ChurchManagement.xcdatamodeld in Sources */,
+				CF1DE7532AABB0690002AD35 /* SignInView.swift in Sources */,
 				CF484D4A2A8C1506005CFB9C /* DataController.swift in Sources */,
 				CF47B9B02A874C0900D3075F /* MainView.swift in Sources */,
+				CF1DE75A2AABBB4C0002AD35 /* NeuButtonStyle.swift in Sources */,
 				CF5677A92A9E94C3005CEF6D /* EmojiStateView.swift in Sources */,
+				CF1DE7582AABB8510002AD35 /* ColorExtension.swift in Sources */,
+				CF1DE7562AABB3E10002AD35 /* ShadowExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
