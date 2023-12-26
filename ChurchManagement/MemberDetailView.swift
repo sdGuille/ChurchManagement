@@ -20,58 +20,61 @@ struct MemberDetailView: View {
     }
     
     var body: some View {
-        VStack {
-            Form {
-                HStack {
-                    Text(customName)
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .frame(width: 72, height: 72)
-                        .background(Color(.systemGray3))
-                        .clipShape(Circle())
-                    
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(member.nombre ?? "")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .padding(.top, 4)
+        ZStack {
+            Color.element
+            VStack {
+                Form {
+                    HStack {
+                        Text(customName)
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .frame(width: 72, height: 72)
+                            .background(Color(.systemGray3))
+                            .clipShape(Circle())
                         
-                        Text(member.apellido ?? "")
-                            .font(.footnote)
-                            .tint(.gray)
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(member.nombre ?? "")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .padding(.top, 4)
+                            
+                            Text(member.apellido ?? "")
+                                .font(.footnote)
+                                .tint(.gray)
+                        }
+                        
                     }
                     
+                    Section("Inofrmacion General") {
+                        Text(member.telefono ?? "Unknown")
+                        Text(member.esCasado ? "Casado/a" : "Soltero/a")
+                        Text(member.birthdate ?? Date(), style: .date)
+                        Text(member.ocupacion ?? "Oficios domesticos")
+                    }
+                    .font(.footnote)
+                    .fontWeight(.semibold)
+                    
+                    Section("Informacion Ministerial") {
+                        Text(member.esMiembro ? "Miembro en propiedad" : "Miembro Principiante")
+                        Text(member.bautizadoES ? "Bautizado en el Espiritu Santo" : "")
+                        Text(member.ministerio ?? "")
+                    }
+                    .font(.footnote)
+                    .fontWeight(.semibold)
+                }
+                .alert("Eliminar miembro?", isPresented: $showDeleteAlert) {
+                    Button("Eliminar", role: .destructive, action: deleteMember)
+                    Button("Cancelar", role: .cancel) {}
+                } message: {
+                    Text("Esta seguro?")
                 }
                 
-                Section("Inofrmacion General") {
-                    Text(member.telefono ?? "Unknown")
-                    Text(member.esCasado ? "Casado/a" : "Soltero/a")
-                    Text(member.birthdate ?? Date(), style: .date)
-                    Text(member.ocupacion ?? "Oficios domesticos")
-                }
-                .font(.footnote)
-                .fontWeight(.semibold)
-                
-                Section("Informacion Ministerial") {
-                    Text(member.esMiembro ? "Miembro en propiedad" : "Miembro Principiante")
-                    Text(member.bautizadoES ? "Bautizado en el Espiritu Santo" : "")
-                    Text(member.ministerio ?? "")
-                }
-                .font(.footnote)
-                .fontWeight(.semibold)
-            }
-            .alert("Eliminar miembro?", isPresented: $showDeleteAlert) {
-                Button("Eliminar", role: .destructive, action: deleteMember)
-                Button("Cancelar", role: .cancel) {}
-            } message: {
-                Text("Esta seguro?")
-            }
-            
-            .toolbar {
-                Button {
-                    showDeleteAlert = true
-                } label: {
-                    Label("Eliminar miembro", systemImage: "trash")
+                .toolbar {
+                    Button {
+                        showDeleteAlert = true
+                    } label: {
+                        Label("Eliminar miembro", systemImage: "trash")
+                    }
                 }
             }
         }

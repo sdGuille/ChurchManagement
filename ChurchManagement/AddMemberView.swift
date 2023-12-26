@@ -24,6 +24,7 @@ struct AddMemberView: View {
     
     @State private var bautizadoES = false
     
+    
     let ministerios = ["Concilio", "Oracion", "Dicipulado", "Misiones", "Alabanza", "Servidores", "Diaconizas", "Infanto Juvenil", "Castillo del Rey"]
     
     var body: some View {
@@ -78,6 +79,13 @@ struct AddMemberView: View {
             .navigationTitle("Agregar miembro")
         }
     }
+    
+//    var isValid: Bool {
+//        let nuevoMiembro = Member(context: moc)
+//        !nombre.isEmpty &&
+//        !apellido.isEmpty &&
+//        !telefono.isEmpty
+//    }
 }
 
 struct AddMemberView_Previews: PreviewProvider {

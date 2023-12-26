@@ -21,10 +21,10 @@ struct MainView: View {
             List {
                 ForEach(members, id: \.self) { member in
                     NavigationLink {
-                        MemberDetailView(member: member)
+                        DetailView(member: member)
                     } label: {
                         HStack {
-                            VStack {
+                            HStack {
                                 Text(member.nombre ?? "Nombre desconocido")
                                     .font(.headline)
                                 Text(member.apellido ?? "")
@@ -45,11 +45,17 @@ struct MainView: View {
                     } label: {
                         Label("Agregar miembro", systemImage: "person.badge.plus")
                             .font(.title2)
+                            .foregroundColor(.black)
+                            
+                            
                     }
                 }
                 
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
+                        .font(.title2)
+                        .foregroundColor(.black)
+                    
                 }
             }
             
